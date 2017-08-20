@@ -3,7 +3,7 @@ Yii 2 Advanced Project Template Ecommerces
 
 ขั้นตอนการติดตั้ง 
 1. ติดตั้ง ตัวจำลอง server ก่อน 
-2. ติดตัง composer 
+2. ติดตัง composer ลิงค์ http://dixonsatit.github.io/2015/06/29/using-extensions.html
 3. git clone https://github.com/chanpan/20170820_Yii2_Ecommerces.git
 4. เข้าไปที่ Folder  20170820_Yii2_Ecommerces/common/main-local.php
     'db' => [
