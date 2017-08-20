@@ -51,6 +51,7 @@ class AppComponent extends Component {
 
         Yii::$app->params['sidebar'] = [
             ['label' => 'Dashboard', 'icon' => 'glyphicon glyphicon-dashboard', 'url' => ['//site/index']],
+            ['label' => 'เข้าชมเว็บไซต์', 'icon' => 'fa fa-laptop', 'url' => ['//../../frontend/web/site/index']],
 //	    ['label' => 'รายชื่อนักศึกษา', 'icon' => 'glyphicon glyphicon-education', 'url' => ['//app/user-list/index', 'type'=>'student'], 'active' => $controllerID == 'user-list' && $_GET['type'] == 'student', 'visible'=>(Yii::$app->user->can('admin'))],
 //	    ['label' => 'รายชื่ออาจารย์', 'icon' => 'glyphicon glyphicon-blackboard', 'url' => ['//app/user-list/index', 'type'=>'teacher'], 'active' => $controllerID == 'user-list' && $_GET['type'] == 'teacher', 'visible'=>(Yii::$app->user->can('admin'))],
 //	    ['label' => 'รายวิชา', 'icon' => 'glyphicon glyphicon-tag', 'url' => ['//app/tb-course/index'], 'active' => $controllerID == 'tb-course', 'visible'=>(Yii::$app->user->can('admin'))],
