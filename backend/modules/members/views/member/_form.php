@@ -28,40 +28,75 @@ use appxq\sdii\helpers\SDHtml;
 	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 	<h4 class="modal-title" id="itemModalLabel">Member</h4>
     </div>
+    
+   
 
     <div class="modal-body">
-	<?= $form->field($model, 'id')->textInput(['maxlength' => true]) ?>
+	 <div class="container-fluid">
+ 
+  <ul class="nav nav-tabs">
+      <li class="active"><a data-toggle="tab" href="#account">ข้อมูลบัญชี</a></li>
+      <li><a data-toggle="tab" href="#menu1">ข้อมูลประวัติ</a></li>
+      <li><a data-toggle="tab" href="#menu2">ข้อมูลสำหรับการติดต่อสื่อสาร</a></li>
+      <li><a data-toggle="tab" href="#menu3">ข้อมูลสำหรับผู้เสียภาษี</a></li>
+  </ul>
 
-	<?= $form->field($model, 'username')->textInput(['maxlength' => true]) ?>
+  <div class="tab-content">
+      <div id="account" class="tab-pane fade in active">
+          <div class="row">
+              <div class="col-md-12">
+                  <h3>ข้อมูลบัญชี</h3>
+                    <?= $form->field($model, 'id')->textInput(['maxlength' => true]) ?>
 
-	<?= $form->field($model, 'password')->passwordInput(['maxlength' => true]) ?>
+                    <?= $form->field($model, 'username')->textInput(['maxlength' => true]) ?>
 
-	<?= $form->field($model, 'prefix')->textInput(['maxlength' => true]) ?>
+                    <?= $form->field($model, 'password')->passwordInput(['maxlength' => true]) ?>
+                    
+                    <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
+              </div>
+          </div>
+      </div>
+      <div id="menu1" class="tab-pane fade">
+          <div class="row">
+              <div class="col-md-12">
+                  <h3>ข้อมูลประวัติ</h3>
+                <?= $form->field($model, 'prefix')->textInput(['maxlength' => true]) ?>
 
-	<?= $form->field($model, 'fname')->textInput(['maxlength' => true]) ?>
+                <?= $form->field($model, 'fname')->textInput(['maxlength' => true]) ?>
 
-	<?= $form->field($model, 'lname')->textInput(['maxlength' => true]) ?>
+                <?= $form->field($model, 'lname')->textInput(['maxlength' => true]) ?>
 
-	<?= $form->field($model, 'gender')->textInput() ?>
+                <?= $form->field($model, 'gender')->textInput() ?>
 
-	<?= $form->field($model, 'birthday')->textInput() ?>
+                <?= $form->field($model, 'birthday')->textInput() ?>
+              </div>
+          </div>    
+      </div>
+      <div id="menu2" class="tab-pane fade">
+          <div class="row">
+              <div class="col-md-12">
+                  <h3>ข้อมูลสำหรับการติดต่อสื่อสาร</h3>
+                  <?= $form->field($model, 'address')->textInput(['maxlength' => true]) ?>
+                  <?= $form->field($model, 'province')->textInput(['maxlength' => true]) ?>
 
-	<?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
+                  <?= $form->field($model, 'amphur')->textInput(['maxlength' => true]) ?>
 
-	<?= $form->field($model, 'address')->textInput(['maxlength' => true]) ?>
+                  <?= $form->field($model, 'district')->textInput(['maxlength' => true]) ?>
 
-	<?= $form->field($model, 'province')->textInput(['maxlength' => true]) ?>
-
-	<?= $form->field($model, 'amphur')->textInput(['maxlength' => true]) ?>
-
-	<?= $form->field($model, 'district')->textInput(['maxlength' => true]) ?>
-
-	<?= $form->field($model, 'zipcode')->textInput() ?>
-
-	<?= $form->field($model, 'ident_number')->textInput(['maxlength' => true]) ?>
-
-	<?= $form->field($model, 'status')->textInput() ?>
-
+                  <?= $form->field($model, 'zipcode')->textInput() ?>
+              </div>
+          </div>    
+      </div>
+      <div id="menu3" class="tab-pane fade">
+          <div class="row">
+              <div class="col-md-12">
+                   <h3>ข้อมูลสำหรับผู้เสียภาษี</h3>
+                  <?= $form->field($model, 'ident_number')->textInput(['maxlength' => true]) ?>
+              </div>
+          </div>    
+      </div>
+  </div>
+    </div>
     </div>
     <div class="modal-footer">
 	<?= Html::submitButton($model->isNewRecord ? Yii::t('app', 'Create') : Yii::t('app', 'Update'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
