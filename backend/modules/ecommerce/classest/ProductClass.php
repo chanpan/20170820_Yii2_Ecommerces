@@ -5,7 +5,7 @@ namespace backend\modules\ecommerce\classest;
 use Yii;
 
 class ProductClass {
-
+    
     public static function getAutoIdProduct() {
         $model = \backend\modules\ecommerce\models\Product::find()->orderBy(["id" => SORT_DESC])->one();
         $id = 1000;
@@ -47,9 +47,14 @@ class ProductClass {
         return \Yii::$app->user->identity->id;
     }
     
-    public static function saveDeleteImage($name){
+    public static function saveDeleteImage($name, $table=""){
         //$name="15032036105999111a1e0373.44308499.jpg";
-        $sql="SELECT * FROM e_product WHERE image like '%".$name."%' ";
+        if($table == ""){
+           $sql="SELECT * FROM e_product WHERE image like '%".$name."%' "; 
+        }else{
+            $sql="SELECT * FROM $table WHERE image like '%".$name."%' ";
+        }
+        
         $images = \Yii::$app->db->createCommand($sql)->queryOne();
         $id='';
         $arr=[];
@@ -68,8 +73,13 @@ class ProductClass {
             }else{
                 $out = $arr[0];
             }
-            //\appxq\sdii\utils\VarDumper::dump($out);
-            $sql="UPDATE e_product SET image=:image WHERE id=:id";
+            if($table == ""){
+                $sql="UPDATE e_product SET image=:image WHERE id=:id";
+             }else{
+                $sql="UPDATE $table SET image=:image WHERE id=:id"; 
+                 
+             }
+            
             return \Yii::$app->db->createCommand($sql,[":image"=>$out,":id"=>$id])->execute();
         }
     }

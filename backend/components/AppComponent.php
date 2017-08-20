@@ -82,15 +82,16 @@ class AppComponent extends Component {
 //				
 //		 ]
 //	      ],
-            ['label' => 'Person', 'icon' => 'glyphicon glyphicon-user', 'url' => '#', 'active' => (in_array($moduleID, [
+              ['label' => 'Person', 'icon' => 'glyphicon glyphicon-user', 'url' => '#', 'active' => (in_array($moduleID, [
                     'persons',
                 ])), 'items' => [
-                    ['label' => 'บุคคล', 'icon' => 'glyphicon glyphicon-user', 'url' => ['//persons/person/index'], 'active' => $controllerID == 'person'],
+                    ['label' => 'ผู้ใช้งาน', 'icon' => 'fa fa-users', 'url' => ['//user/admin/index'], 'active' => $controllerID == 'user'],
+                
+                    //['label' => 'บุคคล', 'icon' => 'glyphicon glyphicon-user', 'url' => ['//persons/person/index'], 'active' => $controllerID == 'person'],
                     //['label' => 'กรุ๊ฟเลือด', 'icon' => 'glyphicon glyphicon-th-list', 'url' => ['//persons/blood-type/index'], 'active' => $controllerID == 'blood-type'],
                     //['label' => 'รายชื่อประเทศ', 'icon' => 'glyphicon glyphicon-th-list', 'url' => ['//persons/country/index'], 'active' => $controllerID == 'country'],
                     ['label' => 'เพศ', 'icon' => 'glyphicon glyphicon-th-list', 'url' => ['//persons/gender/index'], 'active' => $controllerID == 'gender'],
-                    //['label' => 'ประเภทบุคคล', 'icon' => 'glyphicon glyphicon-th-list', 'url' => ['//persons/group/index'], 'active' => $controllerID == 'group'],
-                    //['label' => 'สถานะสมรถ', 'icon' => 'glyphicon glyphicon-th-list', 'url' => ['//persons/marriage-status/index'], 'active' => $controllerID == 'marriage-status'],
+                        //['label' => 'สถานะสมรถ', 'icon' => 'glyphicon glyphicon-th-list', 'url' => ['//persons/marriage-status/index'], 'active' => $controllerID == 'marriage-status'],
                    // ['label' => 'สัญชาติ', 'icon' => 'glyphicon glyphicon-th-list', 'url' => ['//persons/nationality/index'], 'active' => $controllerID == 'nationality'],
                    // ['label' => 'ศาสนา', 'icon' => 'glyphicon glyphicon-th-list', 'url' => ['//persons/religion/index'], 'active' => $controllerID == 'religion'],
                    // ['label' => 'จังหวัด', 'icon' => 'glyphicon glyphicon-th-list', 'url' => ['//persons/province/index'], 'active' => $controllerID == 'province'],
@@ -109,15 +110,19 @@ class AppComponent extends Component {
 //                    ['label' => 'Tags', 'icon' => 'glyphicon glyphicon-tags', 'active' => ($controllerID == 'tags' && $_GET['taxonomy'] == 'post_tag'), 'url' => ['//core/tags', 'taxonomy' => 'post_tag']],
 //                ]
 //            ],
-                       ['label' => 'รายการที่อยู่', 'icon' => 'glyphicon glyphicon-screenshot', 'url' => '#', 'active' => (in_array($moduleID, [
-                 'addr',
-             ])), 'items' => [
-                 ['label' => 'จังหวัด', 'icon' => 'glyphicon glyphicon-list-alt', 'url' => ['//addr/addr-province/index'], 'active' => $controllerID == 'addr-province'],
-                 ['label' => 'อำเภอ', 'icon' => 'glyphicon glyphicon-list-alt', 'active' => ($controllerID == 'addr-district'), 'url' => ['//addr/addr-district/index']],
-                               ['label' => 'ตำบล', 'icon' => 'glyphicon glyphicon-list-alt', 'url' => ['//addr/addr-subdistrict/index'], 'active' => $controllerID == 'addr-subdistrict'],
-                               ['label' => 'ประเทศ', 'icon' => 'glyphicon glyphicon-list-alt', 'active' => ($controllerID == 'addr-country'), 'url' => ['//addr/addr-country/index']],
-             ]
-                ],
+            //['label' => 'ข้อมูลข่าวสาร', 'icon' => 'glyphicon glyphicon-list-alt', 'url' => ['//ecommerce/information/index'], 'active' => $controllerID == 'information'], 
+            ['label' => 'ข้อมูลข่าวสาร', 'icon' => 'glyphicon glyphicon-dashboard', 'url' => ['//information/index']],
+          
+            ['label' => 'รายการที่อยู่', 'icon' => 'glyphicon glyphicon-screenshot', 'url' => '#', 'active' => (in_array($moduleID, [
+                    'addr',
+                ])), 'items' => [
+                    ['label' => 'จังหวัด', 'icon' => 'glyphicon glyphicon-list-alt', 'url' => ['//addr/addr-province/index'], 'active' => $controllerID == 'addr-province'],
+                    ['label' => 'อำเภอ', 'icon' => 'glyphicon glyphicon-list-alt', 'active' => ($controllerID == 'addr-district'), 'url' => ['//addr/addr-district/index']],
+                    ['label' => 'ตำบล', 'icon' => 'glyphicon glyphicon-list-alt', 'url' => ['//addr/addr-subdistrict/index'], 'active' => $controllerID == 'addr-subdistrict'],
+                    ['label' => 'ประเทศ', 'icon' => 'glyphicon glyphicon-list-alt', 'active' => ($controllerID == 'addr-country'), 'url' => ['//addr/addr-country/index']],
+                ]
+            ],
+             
 //	    ['label' => 'Media', 'icon' => 'glyphicon glyphicon-picture', 'url' => ['//core/media/index'], 'visible'=>(Yii::$app->user->can('admin'))],
 //	    ['label' => 'Pages', 'icon' => 'glyphicon glyphicon-file', 'visible'=>(Yii::$app->user->can('admin')), 'url' => '#', 'active' => $type=='page' && (in_array($controllerID, [
 //		    'posts',
@@ -141,10 +146,10 @@ class AppComponent extends Component {
                     ['label' => 'ข้อมูลองค์กร', 'icon' => 'fa fa-location-arrow', 'url' => ['//core/core-options/config']],
                     //['label' => 'คณะ', 'icon' => 'glyphicon glyphicon-th-list', 'url' => ['//app/tb-faculty/index'], 'active' => $controllerID == 'tb-faculty',],
                     //['label' => 'ภาควิชา', 'icon' => 'glyphicon glyphicon-th-list', 'url' => ['//app/tb-department/index'], 'active' => $controllerID == 'tb-department',],
-                    ['label' => 'Generate', 'icon' => 'fa fa-puzzle-piece', 'active' => $controllerID == 'core-generate', 'url' => ['//core/core-generate']],
-                    ['label' => 'Options Config', 'icon' => 'fa fa-sliders', 'active' => ($controllerID == 'core-options' && $actionID !== 'config'), 'url' => ['//core/core-options']],
-                    ['label' => 'Input Fields', 'icon' => 'fa fa-plug', 'active' => $controllerID == 'core-fields', 'url' => ['//core/core-fields']],
-                    ['label' => 'Item Alias', 'icon' => 'fa fa-share-alt', 'active' => $controllerID == 'core-item-alias', 'url' => ['//core/core-item-alias']],
+                    //['label' => 'Generate', 'icon' => 'fa fa-puzzle-piece', 'active' => $controllerID == 'core-generate', 'url' => ['//core/core-generate']],
+                    //['label' => 'Options Config', 'icon' => 'fa fa-sliders', 'active' => ($controllerID == 'core-options' && $actionID !== 'config'), 'url' => ['//core/core-options']],
+                    //['label' => 'Input Fields', 'icon' => 'fa fa-plug', 'active' => $controllerID == 'core-fields', 'url' => ['//core/core-fields']],
+                   // ['label' => 'Item Alias', 'icon' => 'fa fa-share-alt', 'active' => $controllerID == 'core-item-alias', 'url' => ['//core/core-item-alias']],
                     ['label' => 'Authentication', 'icon' => 'fa fa-cogs', 'active' => in_array($moduleID, ['admin']), 'url' => ['//admin']],
                     ['label' => 'Tables Fields', 'icon' => 'fa fa-magic', 'active' => $controllerID == 'tables-fields', 'url' => '#', 'items' => [
                             ['label' => 'Profile', 'icon' => 'fa fa-chevron-right', 'active' => ($controllerID == 'tables-fields' && $_GET['table'] == 'profile'), 'url' => ['//core/tables-fields', 'table' => 'profile']],
