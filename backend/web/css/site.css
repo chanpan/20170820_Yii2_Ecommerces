@@ -1,0 +1,17 @@
+.modal-xxl {
+    width: 90%;
+}
+
+.modal {
+    background: rgba(0,0,0,0.3);
+}
+
+input[type="radio"]{
+        transform: scale(2, 2);
+    -moz-transform: scale(2, 2);
+    -ms-transform: scale(2, 2);
+    -webkit-transform: scale(2, 2);
+    -o-transform: scale(2, 2);
+    margin-right: 10px !important;
+    margin-left: 10px !important;
+}
