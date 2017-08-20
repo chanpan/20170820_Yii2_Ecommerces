@@ -39,6 +39,11 @@ return [
             'class' => 'backend\modules\ecommerce\Module',
 
         ],
+        'members' => [
+
+            'class' => 'backend\modules\members\Module',
+
+        ],
         'admin' => [
             'class' => 'appxq\admin\Module',
             //'layout' => 'left-menu', // defaults to null, using the application's layou

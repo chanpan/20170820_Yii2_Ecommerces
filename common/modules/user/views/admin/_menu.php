@@ -38,7 +38,7 @@ use yii\bootstrap\Nav;
 	    'active' => (in_array($this->context->action->id, ['create'])),
             'items' => [
                 [
-                    'label'   => Yii::t('user', 'New user'),
+                    'label'   => Yii::t('user', 'เพิ่ม พนักงาน'),
                     'url'     => ['/user/admin/create'],
                 ],
                 [

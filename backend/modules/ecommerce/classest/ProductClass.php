@@ -5,6 +5,15 @@ namespace backend\modules\ecommerce\classest;
 use Yii;
 
 class ProductClass {
+    public static function getAutoId($tableName="") {
+        $sql="SELECT * FROM $tableName ORDER BY id DESC LIMIT 1";
+        $model = \Yii::$app->db->createCommand($sql)->queryOne();
+        $id = 1000;
+        if (!empty($model)) {
+            $id = (int) $model['id'] + 1;
+        }
+        return (string) $id;
+    }
     
     public static function getAutoIdProduct() {
         $model = \backend\modules\ecommerce\models\Product::find()->orderBy(["id" => SORT_DESC])->one();

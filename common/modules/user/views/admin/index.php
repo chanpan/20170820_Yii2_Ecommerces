@@ -23,7 +23,7 @@ use yii\widgets\Pjax;
  * @var UserSearch $searchModel
  */
 
-$this->title = Yii::t('user', 'Manage users');
+$this->title = Yii::t('user', 'จัดการข้อมูลพนักงาน');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
@@ -100,7 +100,8 @@ $this->params['breadcrumbs'][] = $this->title;
             },
             'format' => 'raw',
         ],
-        [
+        [   
+            'contentOptions'=>['width'=>'50'],
             'class' => 'yii\grid\ActionColumn',
             'template' => '{update} {delete}',
         ],

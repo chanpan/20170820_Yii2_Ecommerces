@@ -32,7 +32,8 @@ use yii\helpers\Html;
         ],
     ]); ?>
 
-    <?= $form->field($profile, 'name') ?>
+    <?= $form->field($profile, 'fname') ?>
+ <?= $form->field($profile, 'lname') ?>
     <?= $form->field($profile, 'public_email') ?>
     <?= $form->field($profile, 'website') ?>
     <?= $form->field($profile, 'location') ?>

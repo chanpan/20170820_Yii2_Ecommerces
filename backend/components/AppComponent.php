@@ -83,9 +83,10 @@ class AppComponent extends Component {
 //		 ]
 //	      ],
               ['label' => 'Person', 'icon' => 'glyphicon glyphicon-user', 'url' => '#', 'active' => (in_array($moduleID, [
-                    'persons',
+                    'user',
                 ])), 'items' => [
-                    ['label' => 'ผู้ใช้งาน', 'icon' => 'fa fa-users', 'url' => ['//user/admin/index'], 'active' => $controllerID == 'user'],
+                    ['label' => 'ข้อมูลพนักงาน', 'icon' => 'fa fa-users', 'url' => ['//user/admin/index'], 'active' => $controllerID == 'admin'],
+                    ['label' => 'ข้อมูลสมาชิก', 'icon' => 'fa fa-user', 'url' => ['//members/member/index'], 'active' => $controllerID == 'member'],
                 
                     //['label' => 'บุคคล', 'icon' => 'glyphicon glyphicon-user', 'url' => ['//persons/person/index'], 'active' => $controllerID == 'person'],
                     //['label' => 'กรุ๊ฟเลือด', 'icon' => 'glyphicon glyphicon-th-list', 'url' => ['//persons/blood-type/index'], 'active' => $controllerID == 'blood-type'],
@@ -111,7 +112,7 @@ class AppComponent extends Component {
 //                ]
 //            ],
             //['label' => 'ข้อมูลข่าวสาร', 'icon' => 'glyphicon glyphicon-list-alt', 'url' => ['//ecommerce/information/index'], 'active' => $controllerID == 'information'], 
-            ['label' => 'ข้อมูลข่าวสาร', 'icon' => 'glyphicon glyphicon-dashboard', 'url' => ['//information/index']],
+            ['label' => 'ข้อมูลข่าวสาร', 'icon' => 'glyphicon glyphicon-globe', 'url' => ['//information/index']],
           
             ['label' => 'รายการที่อยู่', 'icon' => 'glyphicon glyphicon-screenshot', 'url' => '#', 'active' => (in_array($moduleID, [
                     'addr',

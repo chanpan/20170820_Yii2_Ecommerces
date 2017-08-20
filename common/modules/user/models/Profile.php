@@ -41,6 +41,8 @@ class Profile extends BaseProfile
     {
 	$labels = [
             'name'           => Yii::t('user', 'Nickname'),
+            'fname'           => Yii::t('user', 'ชื่อ'),
+            'lname'           => Yii::t('user', 'นามสกุล'),
             'public_email'   => Yii::t('user', 'Email (public)'),
             'gravatar_email' => Yii::t('user', 'Gravatar email'),
             'location'       => Yii::t('user', 'Location'),
