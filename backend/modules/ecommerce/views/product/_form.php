@@ -94,6 +94,19 @@ use appxq\sdii\widgets\ModalForm;
         <div class="clearfix"></div>
         <div class="col-md-12">
             <?php 
+            echo $form->field($model, 'pro_id')->widget(Select2::classname(), [
+                    'data' => ArrayHelper::map(backend\modules\ecommerce\models\Promotion::find()->all(), "id", "name"),
+                    'options' => ['placeholder' => 'เลือกโปรโมชั่น'],
+                    'pluginOptions' => [
+                        'allowClear' => true
+                    ],
+                ],['prompt'=>'เลือกโปรโมชั่น']);
+        ?>
+            
+            
+        </div> 
+        <div class="col-md-12">
+            <?php 
             echo $form->field($model, 'type_id')->widget(Select2::classname(), [
                     'data' => ArrayHelper::map(backend\modules\ecommerce\models\Types::find()->all(), "id", "name"),
                     'options' => ['placeholder' => 'กรุณาเลือกประเภทสินค้า'],

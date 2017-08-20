@@ -51,4 +51,5 @@ class Promotion extends \yii\db\ActiveRecord
             'date_end' => Yii::t('app', 'วันที่สิ้นสุดโปร'),
         ];
     }
+    
 }

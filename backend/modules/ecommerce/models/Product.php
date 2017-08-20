@@ -64,7 +64,7 @@ class Product extends \yii\db\ActiveRecord
             'price2' => Yii::t('app', 'ราคาสมาชิก'),
             'qty' => Yii::t('app', 'จำนวน'),
             'type_id' => Yii::t('app', 'ประเภทสินค้า'),
-            'pro_id' => Yii::t('app', 'หมวดหมู่'),
+            'pro_id' => Yii::t('app', 'ชื่อโปรโมชั่น'),
             'color_id' => Yii::t('app', 'สี'),
             'image' => Yii::t('app', 'รูปภาพสินค้า'),
             'size_id' => Yii::t('app', 'size'),
@@ -80,5 +80,8 @@ class Product extends \yii\db\ActiveRecord
     }
     public function getTypes(){
         return $this->hasOne(Types::className(),['id'=>'type_id']);
+    }
+    public function getPromotion(){
+        return $this->hasOne(Promotion::className(),['id'=>'pro_id']);
     }
 }

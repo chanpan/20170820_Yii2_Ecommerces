@@ -70,7 +70,19 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
             'price:decimal',
             'price2:decimal',
-            'qty',
+            [
+              'format'=>'raw',
+                'attribute'=>'pro_id',
+                'value'=>function($model){
+                   $out =  $model->promotion->name; 
+                   if(empty($model->promotion->name)){
+                       $out = "ไม่มีโปรโมชั่น";
+                   }
+                   return $out;
+                },
+                'filter'=> yii\helpers\ArrayHelper::map(backend\modules\ecommerce\models\Promotion::find()->asArray()->all(), 'id', 'name')
+            ],           
+            //'qty',
 //            [
 //                'format'=>'raw',
 //                'attribute'=>'size_id',
