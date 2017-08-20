@@ -37,10 +37,11 @@ class Member extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
+    public $cpassword;
     public function rules()
     {
         return [
-            [['id', 'username', 'password'], 'required'],
+            [['id', 'username', 'password','cpassword'], 'required'],
             [['gender', 'zipcode', 'status'], 'integer'],
             [['birthday'], 'safe'],
             [['id', 'prefix', 'fname', 'lname'], 'string', 'max' => 255],
@@ -58,6 +59,7 @@ class Member extends \yii\db\ActiveRecord
             'id' => Yii::t('app', 'รหัสสมาชิก'),
             'username' => Yii::t('app', 'ชื่อผู้ใช้งาน'),
             'password' => Yii::t('app', 'รหัสผ่าน'),
+            'cpassword' => Yii::t('app', 'ยืนยันรหัสผ่าน'),
             'prefix' => Yii::t('app', 'คำนำหน้า'),
             'fname' => Yii::t('app', 'ชื่อ'),
             'lname' => Yii::t('app', 'นามสกุล'),

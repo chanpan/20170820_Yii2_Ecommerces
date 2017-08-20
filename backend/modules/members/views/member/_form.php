@@ -26,7 +26,7 @@ use appxq\sdii\helpers\SDHtml;
 
     <div class="modal-header">
 	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-	<h4 class="modal-title" id="itemModalLabel">Member</h4>
+	<h4 class="modal-title" id="itemModalLabel"><?= $this->title?></h4>
     </div>
     
    
@@ -47,12 +47,14 @@ use appxq\sdii\helpers\SDHtml;
               <div class="col-md-12">
                   <h3>ข้อมูลบัญชี</h3>
                     <?= $form->field($model, 'id')->textInput(['maxlength' => true]) ?>
+                    <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
 
                     <?= $form->field($model, 'username')->textInput(['maxlength' => true]) ?>
 
                     <?= $form->field($model, 'password')->passwordInput(['maxlength' => true]) ?>
+                    <?= $form->field($model, 'cpassword')->passwordInput(['maxlength' => true]) ?>
                     
-                    <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
+                    
               </div>
           </div>
       </div>

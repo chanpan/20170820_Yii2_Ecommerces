@@ -12,7 +12,7 @@ use appxq\sdii\helpers\SDHtml;
 /* @var $searchModel backend\modules\members\models\MemberSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = Yii::t('app', 'Members');
+$this->title = Yii::t('app', 'ข้อมูลสมาชิก');
 $this->params['breadcrumbs'][] = $this->title;
 
 ?>
@@ -65,7 +65,7 @@ $this->params['breadcrumbs'][] = $this->title;
 	    [
 		'class' => 'appxq\sdii\widgets\ActionColumn',
 		'contentOptions' => ['style'=>'width:80px;text-align: center;'],
-		'template' => '{view} {update} {delete}',
+		'template' => '{update} {delete}',
 	    ],
         ],
     ]); ?>
@@ -100,7 +100,7 @@ $('#member-grid-pjax').on('click', '.selectionMemberIds', function() {
     disabledMemberBtn(key.length);
 });
 
-$('#member-grid-pjax').on('dblclick', 'tbody tr', function() {
+$('#member-grid-pjax').on('click', 'tbody tr', function() {
     var id = $(this).attr('data-key');
     modalMember('".Url::to(['member/update', 'id'=>''])."'+id);
 });	
