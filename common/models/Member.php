@@ -44,7 +44,7 @@ class Member extends \yii\db\ActiveRecord
             [['gender', 'zipcode', 'status'], 'integer'],
             [['birthday'], 'safe'],
             [['id', 'prefix', 'fname', 'lname'], 'string', 'max' => 255],
-            [['username', 'password', 'email', 'address', 'province', 'amphur', 'district'], 'string', 'max' => 100],
+            [['username', 'password', 'email','tel', 'address', 'province', 'amphur', 'district'], 'string', 'max' => 100],
             [['ident_number'], 'string', 'max' => 2255],
         ];
     }
@@ -71,6 +71,8 @@ class Member extends \yii\db\ActiveRecord
             'zipcode' => Yii::t('app', 'รหัสไปรษณีย์'),
             'ident_number' => Yii::t('app', 'เลขประจำตัวผู้เสียภาษี'),
             'status' => Yii::t('app', 'สถานะสมาชิก'),
+            'tel' => Yii::t('app', 'เบอร์โทรศัพท์'),
+            
         ];
     }
 }

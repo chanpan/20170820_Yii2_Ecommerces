@@ -76,6 +76,9 @@ use appxq\sdii\helpers\SDHtml;
           <div class="row">
               <div class="col-md-12">
                   <h3>ข้อมูลสำหรับการติดต่อสื่อสาร</h3>
+                  <?= $form->field($model, 'tel')->widget(\yii\widgets\MaskedInput::className(), [
+                        'mask' => '999-999-999-9',
+                    ]) ?>
                   <?= $form->field($model, 'address')->textInput(['maxlength' => true]) ?>
                   <?= $form->field($model, 'province')->textInput(['maxlength' => true]) ?>
 
@@ -91,7 +94,14 @@ use appxq\sdii\helpers\SDHtml;
           <div class="row">
               <div class="col-md-12">
                    <h3>ข้อมูลสำหรับผู้เสียภาษี</h3>
-                  <?= $form->field($model, 'ident_number')->textInput(['maxlength' => true]) ?>
+                  <?= $form->field($model, 'ident_number',[
+                        //'template' => '{label}<div class="col-md-8">{input}{error}{hint}</div>',
+                        'horizontalCssClasses' => [
+                             'label' => 'col-md-4',
+                             'offset' => 'col-sm-offset-1',
+                             'wrapper' => 'col-md-4',
+                        ]    
+                    ])->textInput(['maxlength' => true]) ?>
               </div>
           </div>    
       </div>
