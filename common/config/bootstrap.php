@@ -6,7 +6,7 @@ Yii::setAlias('console', dirname(dirname(__DIR__)) . '/console');
 Yii::setAlias('storage', dirname(dirname(__DIR__)) . '/storage');
 Yii::setAlias('@zoomimg', dirname(dirname(__DIR__)) . '/common/lib/zoomimg');
 Yii::setAlias('@storage', realpath(__DIR__.'/../../storage'));
-Yii::setAlias('@themes', realpath(__DIR__.'/../../themes'));
+Yii::setAlias('@themes', realpath(__DIR__.'/../../frontend/themes'));
 
  Yii::setAlias('@storageUrl', 'http://localhost/nut/storage');
 // Url Aliases

@@ -12,13 +12,13 @@ return [
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
     'components' => [
-//        'view' => [
-//         'theme' => [
-//                'pathMap' => [
-//                    '@app/views' => '@vendor/d4rkstar/yii2-remark-asset/views'
-//                ],
-//            ],
-//        ],
+        'view' => [
+         'theme' => [
+                'pathMap' => [
+                    '@app/views' => '@frontend/themes/beststore/views'
+                ],
+            ],
+        ],
         'user' => [
             //'identityClass' => 'common\models\User',
             'identityClass' => 'dektrium\user\models\User',
@@ -36,6 +36,7 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
+        
     ],
     'modules' => [
         'user' => [
@@ -47,5 +48,6 @@ return [
         ],
         //...
     ],
+    
     'params' => $params,
 ];
