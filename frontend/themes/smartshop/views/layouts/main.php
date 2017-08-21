@@ -9,7 +9,7 @@ use yii\widgets\Breadcrumbs;
 use frontend\themes\smartshop\SmartshopAsset;
 use common\widgets\Alert;
 
-//SmartshopAsset::register($this);
+ SmartshopAsset::register($this);
 $asset_path = Yii::$app->assetManager->getPublishedUrl('@frontend/themes/smartshop/assets');
 ?>
 <?php $this->beginPage() ?>

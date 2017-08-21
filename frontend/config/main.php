@@ -15,7 +15,7 @@ return [
         'view' => [
          'theme' => [
                 'pathMap' => [
-                    '@app/views' => '@frontend/themes/beststore/views'
+                    '@app/views' => '@frontend/themes/beststore/views'//beststore , smartshop
                 ],
             ],
         ],
