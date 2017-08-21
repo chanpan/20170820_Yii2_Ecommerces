@@ -1,157 +1,96 @@
 <?php
-$asset_path = Yii::$app->assetManager->getPublishedUrl('@frontend/themes/smartshop/assets');
-?>
+$asset_path = Yii::$app->assetManager->getPublishedUrl('@frontend/themes/beststore');
+?> 
 <!-- banner -->
-<div class="ban-top">
-    <div class="container">
-        <div class="top_nav_left">
-            <nav class="navbar navbar-default">
-                <div class="container-fluid">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                    </div>
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
-                        <ul class="nav navbar-nav menu__list">
-                            <li class="active menu__item menu__item--current"><a class="menu__link" href="index.html">Home <span class="sr-only">(current)</span></a></li>
-                            <li class="dropdown menu__item">
-                                <a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">men's wear <span class="caret"></span></a>
-                                <ul class="dropdown-menu multi-column columns-3">
-                                    <div class="row">
-                                        <div class="col-sm-6 multi-gd-img1 multi-gd-text ">
-                                            <a href="mens.html"><img src="<?= $asset_path?>/images/woo1.jpg" alt=" "/></a>
-                                        </div>
-                                        <div class="col-sm-3 multi-gd-img">
-                                            <ul class="multi-column-dropdown">
-                                                <li><a href="mens.html">Clothing</a></li>
-                                                <li><a href="mens.html">Wallets</a></li>
-                                                <li><a href="mens.html">Footwear</a></li>
-                                                <li><a href="mens.html">Watches</a></li>
-                                                <li><a href="mens.html">Accessories</a></li>
-                                                <li><a href="mens.html">Bags</a></li>
-                                                <li><a href="mens.html">Caps & Hats</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-sm-3 multi-gd-img">
-                                            <ul class="multi-column-dropdown">
-                                                <li><a href="mens.html">Jewellery</a></li>
-                                                <li><a href="mens.html">Sunglasses</a></li>
-                                                <li><a href="mens.html">Perfumes</a></li>
-                                                <li><a href="mens.html">Beauty</a></li>
-                                                <li><a href="mens.html">Shirts</a></li>
-                                                <li><a href="mens.html">Sunglasses</a></li>
-                                                <li><a href="mens.html">Swimwear</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="clearfix"></div>
+        <div class="banner">
+            <div class="container">
+                <div class="banner-info animated wow zoomIn" data-wow-delay=".5s">
+                    <h3>Free Online Shopping</h3>
+                    <h4>Up to <span>50% <i>Off/-</i></span></h4>
+                    <div class="wmuSlider example1">
+                        <div class="wmuSliderWrapper">
+                            <article style="position: absolute; width: 100%; opacity: 0;"> 
+                                <div class="banner-wrap">
+                                    <div class="banner-info1">
+                                        <p>T-Shirts + Formal Pants + Jewellery + Cosmetics</p>
                                     </div>
-                                </ul>
-                            </li>
-                            <li class="dropdown menu__item">
-                                <a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">women's wear <span class="caret"></span></a>
-                                <ul class="dropdown-menu multi-column columns-3">
-                                    <div class="row">
-                                        <div class="col-sm-3 multi-gd-img">
-                                            <ul class="multi-column-dropdown">
-                                                <li><a href="womens.html">Clothing</a></li>
-                                                <li><a href="womens.html">Wallets</a></li>
-                                                <li><a href="womens.html">Footwear</a></li>
-                                                <li><a href="womens.html">Watches</a></li>
-                                                <li><a href="womens.html">Accessories</a></li>
-                                                <li><a href="womens.html">Bags</a></li>
-                                                <li><a href="womens.html">Caps & Hats</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-sm-3 multi-gd-img">
-                                            <ul class="multi-column-dropdown">
-                                                <li><a href="womens.html">Jewellery</a></li>
-                                                <li><a href="womens.html">Sunglasses</a></li>
-                                                <li><a href="womens.html">Perfumes</a></li>
-                                                <li><a href="womens.html">Beauty</a></li>
-                                                <li><a href="womens.html">Shirts</a></li>
-                                                <li><a href="womens.html">Sunglasses</a></li>
-                                                <li><a href="womens.html">Swimwear</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-sm-6 multi-gd-img multi-gd-text ">
-                                            <a href="womens.html"><img src="<?= $asset_path?>/images/woo.jpg" alt=" "/></a>
-                                        </div>
-                                        <div class="clearfix"></div>
+                                </div>
+                            </article>
+                            <article style="position: absolute; width: 100%; opacity: 0;"> 
+                                <div class="banner-wrap">
+                                    <div class="banner-info1">
+                                        <p>Toys + Furniture + Lighting + Watches</p>
                                     </div>
-                                </ul>
-                            </li>
-                            <li class=" menu__item"><a class="menu__link" href="electronics.html">Electronics</a></li>
-                            <li class=" menu__item"><a class="menu__link" href="codes.html">Short Codes</a></li>
-                            <li class=" menu__item"><a class="menu__link" href="contact.html">contact</a></li>
-                        </ul>
+                                </div>
+                            </article>
+                            <article style="position: absolute; width: 100%; opacity: 0;"> 
+                                <div class="banner-wrap">
+                                    <div class="banner-info1">
+                                        <p>Tops + Books & Media + Sports</p>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
                     </div>
-                </div>
-            </nav>	
-        </div>
-        <div class="top_nav_right">
-            <div class="cart box_1">
-                <a href="checkout.html">
-                    <h3> <div class="total">
-                            <i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i>
-                            <span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span> items)</div>
-
-                    </h3>
-                </a>
-                <p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
-
-            </div>	
-        </div>
-        <div class="clearfix"></div>
-    </div>
-</div>
-<!-- //banner-top -->
-<!-- banner -->
-<div class="banner-grid">
-    <div id="visual">
-        <div class="slide-visual">
-            <!-- Slide Image Area (1000 x 424) -->
-            <ul class="slide-group">
-                <li><img class="img-responsive" src="<?= $asset_path?>/images/ba1.jpg" alt="Dummy Image" /></li>
-                <li><img class="img-responsive" src="<?= $asset_path?>/images/ba2.jpg" alt="Dummy Image" /></li>
-                <li><img class="img-responsive" src="<?= $asset_path?>/images/ba3.jpg" alt="Dummy Image" /></li>
-            </ul>
-
-            <!-- Slide Description Image Area (316 x 328) -->
-            <div class="script-wrap">
-                <ul class="script-group">
-                    <li><div class="inner-script"><img class="img-responsive" src="<?= $asset_path?>/images/baa1.jpg" alt="Dummy Image" /></div></li>
-                    <li><div class="inner-script"><img class="img-responsive" src="<?= $asset_path?>/images/baa2.jpg" alt="Dummy Image" /></div></li>
-                    <li><div class="inner-script"><img class="img-responsive" src="<?= $asset_path?>/images/baa3.jpg" alt="Dummy Image" /></div></li>
-                </ul>
-                <div class="slide-controller">
-                    <a href="#" class="btn-prev"><img src="<?= $asset_path?>/images/btn_prev.png" alt="Prev Slide" /></a>
-                    <a href="#" class="btn-play"><img src="<?= $asset_path?>/images/btn_play.png" alt="Start Slide" /></a>
-                    <a href="#" class="btn-pause"><img src="<?= $asset_path?>/images/btn_pause.png" alt="Pause Slide" /></a>
-                    <a href="#" class="btn-next"><img src="<?= $asset_path?>/images/btn_next.png" alt="Next Slide" /></a>
+                    <script src="<?= $asset_path?>/js/jquery.wmuSlider.js"></script> 
+                    <script>
+$('.example1').wmuSlider();
+                    </script> 
                 </div>
             </div>
-            <div class="clearfix"></div>
         </div>
-        <div class="clearfix"></div>
-    </div>
-     
-   
-    <?php $this->registerJS("
-    $(function(){
-             
-            $('#visual').pignoseLayerSlider({
-                play: '.btn-play',
-                pause: '.btn-pause',
-                next: '.btn-next',
-                prev: '.btn-prev'
-            });
-        })
-")?>
-</div>
-<!-- //banner -->
+        <!-- //banner -->
+        <!-- banner-bottom -->
+        <div class="banner-bottom">
+            <div class="container"> 
+                <div class="banner-bottom-grids">
+                    <div class="banner-bottom-grid-left animated wow slideInLeft" data-wow-delay=".5s">
+                        <div class="grid">
+                            <figure class="effect-julia">
+                                <img src="<?= $asset_path?>/images/4.jpg" alt=" " class="img-responsive" />
+                                <figcaption>
+                                    <h3>Best <span>Store</span><i> in online shopping</i></h3>
+                                    <div>
+                                        <p>Cupidatat non proident, sunt</p>
+                                        <p>Officia deserunt mollit anim</p>
+                                        <p>Laboris nisi ut aliquip consequat</p>
+                                    </div>
+                                </figcaption>			
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="banner-bottom-grid-left1 animated wow slideInUp" data-wow-delay=".5s">
+                        <div class="banner-bottom-grid-left-grid left1-grid grid-left-grid1">
+                            <div class="banner-bottom-grid-left-grid1">
+                                <img src="<?= $asset_path?>/images/1.jpg" alt=" " class="img-responsive" />
+                            </div>
+                            <div class="banner-bottom-grid-left1-pos">
+                                <p>Discount 45%</p>
+                            </div>
+                        </div>
+                        <div class="banner-bottom-grid-left-grid left1-grid grid-left-grid1">
+                            <div class="banner-bottom-grid-left-grid1">
+                                <img src="<?= $asset_path?>/images/2.jpg" alt=" " class="img-responsive" />
+                            </div>
+                            <div class="banner-bottom-grid-left1-position">
+                                <div class="banner-bottom-grid-left1-pos1">
+                                    <p>Latest New Collections</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="banner-bottom-grid-right animated wow slideInRight" data-wow-delay=".5s">
+                        <div class="banner-bottom-grid-left-grid grid-left-grid1">
+                            <div class="banner-bottom-grid-left-grid1">
+                                <img src="<?= $asset_path?>/images/3.jpg" alt=" " class="img-responsive" />
+                            </div>
+                            <div class="grid-left-grid1-pos">
+                                <p>top and classic designs <span>2016 Collection</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+        </div>
+        <!-- //banner-bottom -->

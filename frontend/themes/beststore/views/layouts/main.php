@@ -59,7 +59,7 @@ new WOW().init();
 
     <body>
        
-       
+       <?php require("header.php")?>
         <!-- collections -->
         <div class="new-collections">
             <div class="container">
